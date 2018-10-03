@@ -29,7 +29,7 @@
 
         //adding a variable with full date to the storage to prevent displaying of the reminder more then once a day
         chrome.storage.sync.set({'date': todaysDate}, function() {
-          console.log('Settings saved');
+          message('Settings saved');
         });
       }
   });

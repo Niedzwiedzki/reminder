@@ -12,7 +12,7 @@ var tomorrowsMonth = dateTomorrow.getMonth();
 var fullDate = new Date().toLocaleDateString()
 
 chrome.storage.sync.get(['date'], function(result) {
-  if((today == 5 || todaysMonth != tomorrowsMonth) && result.date != fullDate){
+  if((today == 3 || todaysMonth != tomorrowsMonth) && result.date == fullDate){
     chrome.runtime.sendMessage({todo: "showReminder"});
   }
 });
